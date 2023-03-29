@@ -1,4 +1,5 @@
 import debounce from 'lodash.debounce';
+import {showStocks} from './js/fetchData'
 
 const input = document.querySelector("#stock-list");
 const btn = document.querySelector(".button");
@@ -8,18 +9,20 @@ const calendar = document.querySelector(".calendar-list");
 const holydays = document.querySelector(".calendar-table");
 
 
+
 input.addEventListener("input", debounce(responseOfInput, 1000));
 
-function showStocks(name){
-    const API_KEY = "UCdhsV2m_RTmkwybpkta6ZvaKFF7ZTpP"; 
-    return fetch(`https://api.polygon.io/v2/aggs/ticker/${name}/range/1/day/2023-01-09/2023-01-09?adjusted=true&sort=asc&limit=120&apiKey=${API_KEY}`).then((response) => { return response.json()})
-}
+
 
 function responseOfInput(event){
     event.preventDefault();
     const stockNameInput = event.target.value;
 
-    return showStocks(stockNameInput.toUpperCase()).then((data) => markup(data));
+    return showStocks(stockNameInput.toUpperCase()).then((data) => {
+        if (data.queryCount === 0) {
+            return 
+        }
+        return markup(data)});
 }
 
 
