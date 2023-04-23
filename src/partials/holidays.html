@@ -4,28 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stock screener</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Holidays</title>
   </head>
   <body>
     <header>
-      <div>
-        <form class="form" autocomplete="off">
-          <input
-            type="text"
-            id="stock-list"
-            placeholder="Search stock"
-            type="text"
-            name="stock"
-          />
-          <button type="submit" class="button">Search</button>
-        </form>
-
-        <ul class="stock-list"></ul>
-      </div>
       <div class="header-menu">
         <ul class="list header-menu-list">
-          <li class="header-menu-item"><a href="" class="link">Home</a></li>
+          <li class="header-menu-item"><a href="../index.html" class="link">Home</a></li>
           <li class="header-menu-item"><a href="" class="link">News</a></li>
           <li class="header-menu-item">
             <a href="" class="link">Top change</a>
@@ -35,15 +20,28 @@
             <a href="" class="link">Stock list</a>
           </li>
           <li class="header-menu-item">
-            <a href="./partials/holidays.html">Holidays</a>
+            <a href="">Holidays</a>
           </li>
         </ul>
       </div>
     </header>
     <main>
-    </main>
-    <footer></footer>
-
-    <script src="./index.js" type="module"></script>
+        <ul class="calendar-list"></ul>
+  
+        <div id="calendar"></div>
+  
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Exchange</th>
+              <th>Name of holyday</th>
+              <th>Market status</th>
+            </tr>
+          </thead>
+  
+          <tbody class="calendar-table"></tbody>
+        </table>
+      </main>
   </body>
 </html>
