@@ -1,0 +1,30 @@
+.header-container{
+    background-color: #c3c6d0; 
+}
+
+.header-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+
+.header-menu-list{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.header-menu-item{
+    padding: 20px;
+}
+
+.header__page-link{
+    color: #FFFFFF
+}
+
+.current-page{
+    color: tomato;
+}

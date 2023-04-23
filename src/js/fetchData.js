@@ -5,6 +5,11 @@ export function showStocks(name){
 }
 
 
+// Holidays
+export function marketHolidays(){
+    const API_KEY = "UCdhsV2m_RTmkwybpkta6ZvaKFF7ZTpP"; 
+    return fetch(`https://api.polygon.io/v1/marketstatus/upcoming?apiKey=${API_KEY}`).then((response) => { return response.json()})
+}
 
 
 

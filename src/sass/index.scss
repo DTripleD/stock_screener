@@ -1,2 +1,6 @@
-@import './common';
-@import './example';
+@import './base/common';
+@import './base/visually-hidden';
+@import './components/header';
+@import './components/holidays-list';
+@import './components/input-search';
+

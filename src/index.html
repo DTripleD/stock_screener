@@ -5,41 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stock screener</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./sass/index.scss" />
   </head>
   <body>
-    <header>
-      <div>
-        <form class="form" autocomplete="off">
-          <input
-            type="text"
-            id="stock-list"
-            placeholder="Search stock"
-            type="text"
-            name="stock"
-          />
-          <button type="submit" class="button">Search</button>
-        </form>
-
-        <ul class="stock-list"></ul>
-      </div>
-      <div class="header-menu">
-        <ul class="list header-menu-list">
-          <li class="header-menu-item"><a href="" class="link">Home</a></li>
-          <li class="header-menu-item"><a href="" class="link">News</a></li>
-          <li class="header-menu-item">
-            <a href="" class="link">Top change</a>
-          </li>
-          <li class="header-menu-item"><a href="" class="link">High</a></li>
-          <li class="header-menu-item">
-            <a href="" class="link">Stock list</a>
-          </li>
-          <li class="header-menu-item">
-            <a href="./partials/holidays.html">Holidays</a>
-          </li>
-        </ul>
-      </div>
-    </header>
+    <header class="header-container">
+      <header class="header-menu">
+          <div>
+            <form class="form" autocomplete="off">
+              <input
+                type="text"
+                id="stock-list"
+                placeholder="Search stock"
+                type="text"
+                name="stock"
+              />
+              <button type="submit" class="button">Search</button>
+            </form>
+    
+            <ul class="stock-list"></ul>
+          </div>
+    
+          <div>
+            <ul class="list header-menu-list">
+              <li class="header-menu-item">
+                <a href="./index.html" class="header__page-link current-page">Home</a>
+              </li>
+              <li class="header-menu-item">
+                <a href="" class="header__page-link">News</a>
+              </li>
+              <li class="header-menu-item">
+                <a href="" class="header__page-link">Top change</a>
+              </li>
+              <li class="header-menu-item">
+                <a href="" class="header__page-link">High</a>
+              </li>
+              <li class="header-menu-item">
+                <a href="" class="header__page-link">Stock list</a>
+              </li>
+              <li class="header-menu-item">
+                <a href="./partials/holidays.html" class="header__page-link"
+                  >Holidays</a
+                >
+              </li>
+            </ul>
+          </div>
+        </header>
     <main>
     </main>
     <footer></footer>
